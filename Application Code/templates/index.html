@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lego Voice Assistant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script>var synth = window.speechSynthesis;</script>
+    <style>
+		body {
+ 			 body-background: no-repeat center center fixed;
+  			background-size: cover;
+		}
+
+		.box {
+			margin: 0 auto;
+		  max-width: 60%;
+		  padding: 0 20px;
+		}
+
+		.container {
+		  padding-top: 4%;
+		  margin: 10px 0;
+		}
+
+		.container1 {
+			color: white;
+			padding-top: 10%
+		}
+
+		.darker img{
+
+		}
+
+		.container::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.container img {
+		  float: left;
+		  max-width: 60px;
+		  width: 100%;
+		  margin-right: 20px;
+		  border-radius: 50%;
+		}
+
+		.container img.right {
+		  float: right;
+		  margin-right: : 20px;
+		}
+
+		.button{
+			text-align: center;
+		}
+
+		.nav-link {
+			margin-left: auto;
+		}
+
+	  .speech {
+			border: 0px solid rgb(232, 238, 241);
+	    text-align: center;
+	    padding: 0;
+			margin: 0;
+			font-family: "Arial";
+			font-size: small;
+	  }
+
+    .speech input {
+
+			border: 1;
+      width: 240px;
+      display:inline-flex;
+			height: 30px;
+    }
+
+    .speech img {
+        float: right;
+        width: 40px;
+    }
+    </style>
+</head>
+
+<body background="static/Images/background1.png">
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	    <img src="static/Images/logo1.jpg" alt="">
+			<a class="nav-link" href="/logout" style="color: aliceblue;" >Logout</a>
+	</nav>
+
+	<div class="box">
+
+	  <div class="container1">
+		  <h2>Say the query in any of the following ways</h2>
+		  <p>
+			  <ul>
+				  <li>What is my shipment status</li>
+				  <li>Shipment status of my order</li>
+			  </ul>
+		  </p>
+		</div>
+
+		<div class="speech">
+
+			<div class="container darker">
+			  <img src="static/Images/dell-final1.gif" alt="Avatar" class="right" style="width:100%;">
+				<textarea style="width: 85%;font-family: Calibri;font-size:large" name="q" id="transcript"
+						  placeholder="Your query will appear here after you speak." rows="2" readonly="True"></textarea>
+			</div>
+			<br>
+			<input class="button" id="btn_query" type="button" onclick="startDictation()" value="Query"
+				   style="font-family: Calibri; font-size: large;" />
+			<br><br>
+
+			<div class="container">
+			  <img src="static/Images/dell-final2.jpeg" alt="Avatar" style="width:100%;">
+				<textarea style="width: 85%;font-family: Calibri;font-size:large" id="output" rows="2" placeholder="Results will appear here."
+						  readonly="True"></textarea>
+			</div>
+			<br>
+			<input class="button" id="btn_speak" type="button" value="Speak" onclick="btnClick()" style="font-family: Calibri; font-size: large;" />
+		</div>
+
+</div>
+
+<script>
+	function startDictation() {
+
+		document.getElementById('transcript').value = '';
+		document.getElementById('output').value = '';
+		if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+			var recognition = new webkitSpeechRecognition();
+			recognition.continuous = false;
+			recognition.interimResults = false;
+			recognition.lang = "en-US";
+			recognition.start();
+
+			recognition.onresult = function (e) {
+				document.getElementById('transcript').value = e.results[0][0].transcript;
+				recognition.stop();
+				var data = e.results[0][0].transcript;
+
+				 $.post("http://localhost:5000/status", { "data": data },
+				function (response) {
+					data = response;
+					data = JSON.stringify(data);
+					if (data == "{}") {
+						console.log("No data");
+						data = "No data found";
+					}
+					document.getElementById("output").value = data;
+					btnClick();
+				}).error(function (response) {
+					if (response.status == 400)
+						text = jQuery.parseJSON(response.responseText)["original_exception"];
+					else
+						text = "I'm sorry. I did not get that.";
+					document.getElementById("output").value = text;
+				});
+			};
+
+			recognition.onerror = function (e) {
+				recognition.stop();
+				console.log("Recognition had an error");
+			}
+		}
+	}
+
+	function btnClick() {
+			synth.cancel();
+			var utterThis = new SpeechSynthesisUtterance(document.getElementById("output").value);
+			utterThis.voice = synth.getVoices()[0];
+			utterThis.pitch = 1.0;
+			utterThis.rate = 0.8;
+			utterThis.onerror = function(e) { console.log("Something went wrong with utterance."); };
+			synth.speak(utterThis);
+	}
+</script>
+</body>
+</html>

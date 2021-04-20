@@ -1,0 +1,30 @@
+Emp ID,Emp_name,Emp_dept,Order date,Expected Date,Order no.,Order stock,Shipment Status,City manufactured,City delivery,Product price,Product category,Quantity ,Product name,User-name ,Password
+677509,Lois,IT ,01-09-2020,04-09-2020,118910,IN STOCK,Delivered,Chennai,Ahmedabad,"Rs 69,000",Electronics,1,HP pavilion laptop,lhwalker,Lois1975
+940761,Brenda,Production,02-09-2020,05-09-2020,118911,IN STOCK,Delivered,Ahmedabad,Chennai,"Rs 50,000",Electronics,1,One plus 8T GB,bsrobinson,robinson68
+428945,Joe,Research,04-07-2020,08-07-2020,118912,IN STOCK,Delivered,Bangalore,New Delhi,Rs 367,Books,1,Jay Shetty- Think like a monk,jwrobinson,jwst2000
+408351,Diane,Management,06-06-2020,10-06-2020,118913,IN STOCK,Delivered,Hyderabad,Kolkata,"Rs 15,000",Electronics,1,Skull Candy Earphones,dievans,devansmith
+193819,Benjamin,Accounting,02-12-2020,05-12-2020,118914,IN STOCK,Dispatched,Kolkata,Hyderabad,RS 500,Pantry,2,Cadbury Celebrations,brrussell,brusell2026
+499687,Patrick,Finance,06-12-2020,09-12-2020,118915,IN STOCK,Out for delivery,New Delhi,Bangalore,Rs 1000,Home Deco,1,Philips Moon lIght lamp,pfbailey,bailey56486
+539712,Nancy,Operations,07-08-2020,10-08-2020,118916,IN STOCK,Delivered,Chennai,Ahmedabad,"Rs 69,000",Electronics,1,HP pavilion laptop,ntbaker,Amsterdam
+380086,Carol,HR,10-10-2020,14-10-2020,118917,IN STOCK,Delivered,Ahmedabad,Chennai,"Rs 50,000",Electronics,1,One plus 8T GB,cvmurphy,Samules_15
+477616,Frances,IT ,11-09-2020,14-09-2020,118918,IN STOCK,Delivered,Bangalore,New Delhi,Rs 367,Books,1,Jay Shetty- Think like a monk,fbyoung,Harry_09
+162402,Diana,Production,13-02-2020,17-02-2020,118919,IN STOCK,Delivered,Hyderabad,Kolkata,"Rs 15,000",Electronics,1,Skull Candy Earphones,dtpeterson,Clarkson@567
+231469,Ralph,Research,14-02-2020,20-02-2020,118920,IN STOCK,Delivered,Kolkata,Hyderabad,RS 500,Pantry,2,Cadbury Celebrations,rlflores,shirley_789
+153989,Jack,Management,07-01-2020,10-01-2020,118921,OUT OF STOCK,Will let you know when stock arrives,New Delhi,Bangalore,Rs 1000,Home Deco,1,Philips Moon lIght lamp,jcalexander,1345
+386158,Melissa,Finance,03-12-2020,07-12-2020,118922,IN STOCK,Arriving Today,Chennai,Ahmedabad,Rs 800,Stationary,8,Classmate plain NoteBooks,mqking,12345
+301576,Wayne,Operations,01-09-2020,06-09-2020,118923,IN STOCK,Delivered,Ahmedabad,Bangalore,Rs 3500,Cosmetics,1,Clinique Night Surge Cream,wgwatson,Test1234
+441771,Cheryl,HR,02-09-2020,07-09-2020,118924,IN STOCK,Delivered,Bangalore,New Delhi,Rs 600,Fashion,1,Allen solly T shirt,coscott,56789
+528509,Paula,IT ,04-07-2020,07-07-2020,118925,IN STOCK,Delivered,Hyderabad,Kolkata,Rs 800,Fashion,1,Women crop top-Max,pgdiaz,10112
+912990,Joshua,Production,02-12-2020,07-12-2020,118926,IN STOCK,Arriving Today,Kolkata,Hyderabad,"Rs 10,000",Accessories,1,G-shock watch,jtstewart,Secretgarden
+214352,Theresa,Research,07-12-2020,10-12-2020,118927,IN STOCK,Order Received,New Delhi,Bangalore,"Rs 3,000",Electronics,1,Samsung Power bank,tglee,onedirection
+890290,Julia,Management,06-12-2020,20-04-2020,118928,OUT OF STOCK,Will let you know when stock arrives,Chennai,Ahmedabad,"Rs 20,000",Electronics,1,Apple I-pad 2,jsscott,Scottish458
+622406,Thomas,Finance,07-08-2020,11-08-2020,118929,IN STOCK,Delivered,Ahmedabad,Bangalore,Rs 367,Books,1,Jay Shetty- Think like a monk,tqlewis,lewerstack
+979607,Carol,Operations,10-10-2020,15-10-2020,118930,IN STOCK,Delivered,Bangalore,New Delhi,"Rs 15,000",Electronics,1,Skull Candy Earphones,cjedwards,787980
+969580,Matthew,HR,11-09-2020,15-09-2020,118931,IN STOCK,Delivered,Hyderabad,Kolkata,RS 500,Pantry,2,Cadbury Celebrations,mlturner,818285
+426038,Joan,IT ,05-12-2020,07-12-2020,118932,IN STOCK,Out for delivery,Kolkata,Hyderabad,Rs 1000,Home Deco,1,Philips Moon lIght lamp,jcstewart,00_87
+388642,Ruby,Production,14-02-2020,18-02-2020,118933,IN STOCK,Delivered,New Delhi,Bangalore,Rs 800,Stationary,8,Classmate plain NoteBooks,rrrogers,roger8744
+560455,Carolyn,Research,07-01-2020,05-01-2020,118934,IN STOCK,Delivered,Chennai,Ahmedabad,Rs 3500,Cosmetics,1,Clinique Night Surge Cream,cvhayes,hayes8749
+477253,Anne,Management,03-12-2020,15-10-2020,118935,OUT OF STOCK,Will let you know when stock arrives,Ahmedabad,Bangalore,Rs 600,Fashion,1,Allen solly T shirt,alrussell,russel8474
+263480,Daniel,Finance,01-09-2020,06-09-2020,118936,IN STOCK,Delivered,Bangalore,New Delhi,Rs 800,Fashion,1,Women crop top-Max,dkcooper,ukin_874
+683826,Roger,Operations,02-09-2020,07-09-2020,118937,IN STOCK,Delivered,Hyderabad,Kolkata,"Rs 10,000",Accessories,1,G-shock watch,rlroberts,roberts_73
+474599,Maria,HR,04-07-2020,09-07-2020,118938,OUT OF STock,Will let you know when stock arrives,Kolkata,Hyderabad,"Rs 3,000",Electronics,1,Samsung Power bank,mwwalker,101406
